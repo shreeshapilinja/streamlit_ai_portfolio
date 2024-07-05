@@ -7,6 +7,12 @@ api_key = st.secrets["GOOGLE_API_KEY"]
 genai.configure(api_key=api_key)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
+st.set_page_config(
+    page_title="Shreesha's Portfolio",
+    page_icon=":tada:",
+    layout="centered",
+)
+
 col1 , col2 = st.columns(2)
 
 with col1:
@@ -18,7 +24,13 @@ with col1:
     - **Committed to Innovation**
     - **Published Researcher**
     """)
-
+    with open("images/Shreesha_B_Resume.pdf", "rb") as file:
+        st.download_button(
+            label="Click here to download my PDF resume",
+            data=file,
+            file_name="Shreesha_B_Resume_2024.pdf",
+            mime="application/pdf"
+        )
 
 col2.image(r"images/shreesha_photo.png")
 
@@ -173,8 +185,18 @@ st.slider("Web and App Development", 0, 100, 80)
 st.slider("Soft Skills", 0, 100, 85)
 st.slider("Soft Skills", 0, 100, 70)
 
-# st.write("Web and App Development")
-# st.progress(75,"75%")
+# skills = {
+#     "Python": 90,
+#     "C++": 85,
+#     "OpenCV": 80,
+#     "Django": 75,
+#     "Linux": 70,
+#     "ROS": 65,
+#     "Git": 80,
+# }
+
+# for skill, proficiency in skills.items():
+#     st.slider(skill, 0, 100, proficiency)
 
 st.title("Gallery")
 
