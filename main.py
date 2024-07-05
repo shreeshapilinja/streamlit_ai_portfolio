@@ -20,10 +20,10 @@ with col1:
     """)
 
 
-col2.image(r"images\shreesha_photo.png")
+col2.image(r"images/shreesha_photo.png")
 
 # with col2:
-#     st.image(r"images\shreesha_photo.png")
+#     st.image(r"images/shreesha_photo.png")
 
 st.write(" ") # for space
 
@@ -163,7 +163,7 @@ with col2:
 
 st.write(" ") # for spacing 
 st.title("My Setup")
-st.image(r"images\setup.jpg")
+st.image(r"images/setup.jpg")
 
 st.write(" ") # for spacing 
 st.title("My Skills")
@@ -178,28 +178,28 @@ st.slider("Soft Skills", 0, 100, 70)
 
 st.title("Gallery")
 
-st.image(r"images\long.jpg")
+st.image(r"images/long.jpg")
 
 # col1 , col2 , col3 = st.columns(3)
 
 # with col1:
-#     st.image(r"images\g1.jpg")
-#     st.image(r"images\g4.jpg")
+#     st.image(r"images/g1.jpg")
+#     st.image(r"images/g4.jpg")
 
 # with col2:
-#     st.image(r"images\g2.jpg")
-#     st.image(r"images\g5.jpg")
+#     st.image(r"images/g2.jpg")
+#     st.image(r"images/g5.jpg")
 
 # with col3:
-#     st.image(r"images\g3.jpg")
-#     st.image(r"images\g6.jpg")
+#     st.image(r"images/g3.jpg")
+#     st.image(r"images/g6.jpg")
 
 cols = st.columns(3)
 
 # start, end = 1, 3
 # for col in cols:
 #     for i in range(start, end):
-#         col.image(rf"images\g{i}.jpg")
+#         col.image(rf"images/g{i}.jpg")
 #     start += 2
 #     end += 2
 
@@ -207,7 +207,7 @@ num_images = 6
 for i in range(1, num_images + 1):
     col = cols[(i - 1) % 3]
     with col:
-        col.image(rf"images\g{i}.jpg")
+        col.image(rf"images/g{i}.jpg")
 
 st.write(" ") # for spacing
 st.markdown("""
