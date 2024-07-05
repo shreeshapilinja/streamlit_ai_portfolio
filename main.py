@@ -13,15 +13,63 @@ st.set_page_config(
     layout="centered",
 )
 
+# Add custom CSS for styling
+st.markdown(
+    """
+    <style>
+    .header {
+        background-color: #E67629;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .subheader {
+        background-color: #87CEEB;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .section {
+        background-color: #E0FFFF;
+        color: #4682B4;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .button {
+        background-color: #4682B4;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        display: inline-block;
+        margin-top: 10px;
+    }
+    .button a {
+        color: white;
+        text-decoration: none;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Header section with an image
+st.markdown('<div class="header"><h1>👋 WELCOME 🙏 </h1><h2>I am Shreesha Beejanthadka</h2></div>', unsafe_allow_html=True)
+
 col1 , col2 = st.columns(2)
 
 with col1:
-    st.subheader(" :wave: WELCOME 🙏 ")
-    st.title("I am Shreesha Beejanthadka")
+    st.subheader(" ") # for space
+    st.subheader("&nbsp;&nbsp;&nbsp;&nbsp; About Me")
     st.markdown("""
     - **Passionate AI & ML Student**
     - **Proficient in Python & Web Development**
     - **Committed to Innovation**
+    - **Proven Academic Achiever**
+    - **Strong Problem-Solver**
     - **Published Researcher**
     """)
     with open("images/Shreesha_B_Resume.pdf", "rb") as file:
@@ -39,7 +87,12 @@ col2.image(r"images/shreesha_photo.png")
 
 st.write(" ") # for space
 
-st.markdown("# :robot_face: Shreesha's AI :robot_face:")
+# st.markdown("# :robot_face: Shreesha's AI :robot_face:")
+st.markdown("""
+    <div style="background-color:pink;padding:10px;border-radius:5px;">
+    <h1 style="text-align:center;">🤖 Shreesha's AI 🤖</h1>
+    </div>
+    """, unsafe_allow_html=True)
 
 persona = f"""
 You are Shreesha's AI bot. You help people answer questions about your self (i.e Shreesha B)
@@ -147,7 +200,7 @@ Shreesha's Discord: https://discordapp.com/users/1156835916208410676
 Shreesha's Github : https://github.com/shreeshapilinja
 """
 
-st.write(" 💬 Ask anything about me")
+st.write(" 💬 Ask anything about Shreesha")
 user_question = st.text_input("Enter your question:", "", label_visibility="collapsed")
 if st.button("ASK",use_container_width=400):
     prompt = persona + " Here is the question the user asked: " + user_question
